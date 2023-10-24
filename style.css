@@ -130,7 +130,7 @@ img{
 }
 
 .nav__contact a:nth-child(1)::after{
-   content: url('/images/icons/mail.png') ;
+   content: url('images/icons/mail.png') ;
    position: absolute;
    left: 0;
    transition: all 0.5s;
