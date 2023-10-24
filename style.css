@@ -8,6 +8,9 @@
    line-height: 24px;
 }
 
+html{
+   overflow-x: hidden;
+}
 
 
 body{
@@ -133,18 +136,31 @@ img{
 .menu__content ul li a{
    font-size: 32px;
    font-weight: bold;
+   transition: all 0.5s;
+}
+
+.menu__content ul li a:hover{
+   color: #0046BB;
 }
 
 
 .close{
-   padding: 25px;
-   background-color: red;
+   padding: 20px 15px;
    display: inline-block;
    position: absolute;
    top: 30px;
    right: 30px;
    border-radius: 15px;
    cursor: pointer;
+   font-size: 24px;
+   font-weight: bold;
+   border: 5px solid #383838;
+   transition: all 0.5s;
+
+} 
+.close:hover{
+   color: #9c0e0e;
+   border: 5px solid #9c0e0e;
 }
 /* MENU */
 
@@ -502,6 +518,7 @@ section.house *{
 /* ABOUT START*/
 
 .about{
+   width: 100%;
    position: relative;
    padding-bottom: 80px;
    overflow: hidden;
@@ -702,6 +719,10 @@ section.house *{
    .nav__contact{
       display: none;
    }
+   .nav__links ul{
+      display: flex;
+      justify-content: space-around;
+   }
    .nav__links ul li a{
       font-size: 15px;
    }
@@ -714,9 +735,6 @@ section.house *{
       margin-left: 10%;
    }
 
-   .swiper{
-      /* min-width: 0; */
-   }
    .swiper p{
       margin-left: 10%;
    }
@@ -808,12 +826,15 @@ section.house *{
    }
    .house h1{
       margin-left: 5%;
-      font-size: 34px;
-      line-height: 40px;
+      font-size: 50px;
+      max-width: 70%;
+      line-height: 50px;
    }
    .house p{
+      margin-top: 30px;
       margin-left: 5%;
-      font-size: 16px;
+      margin-bottom: 60px;
+      font-size: 22px;
    }
    .house a{
       margin-left: 5%;

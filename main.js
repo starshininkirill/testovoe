@@ -2,6 +2,9 @@ let menuBtn = document.getElementById('menu-btn')
 let closeBtn = document.getElementById('close')
 let menu = document.getElementById('menu')
 
+let currnetWidth = window.innerWidth 
+console.log(currnetWidth);
+
 menuBtn.addEventListener('click', function(e){
    menu.classList.add('menu-active')
 })
@@ -10,9 +13,17 @@ closeBtn.addEventListener('click', function(e){
    menu.classList.remove('menu-active')
 })
 
+let slides = null
+if(window.innerWidth > 1200){
+   slides = 3
+}else if (window.innerWidth <= 1200 && window.innerWidth > 900){
+   slides = 2
+}else{
+   slides = 1
+}
 
 let swiper = new Swiper(".mySwiper", {
-   slidesPerView: 3,
+   slidesPerView: slides,
    spaceBetween: 30,
    loop: true,
    navigation: {
@@ -82,7 +93,7 @@ document.querySelectorAll('.fade-left').forEach((i) => {
    }
 });
 
-
+console.log(window);
 
 window.addEventListener('resize', function (e) {
    console.log(e.target.outerWidth);
