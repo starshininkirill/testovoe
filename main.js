@@ -2,16 +2,17 @@ let menuBtn = document.getElementById('menu-btn')
 let closeBtn = document.getElementById('close')
 let menu = document.getElementById('menu')
 
-let currnetWidth = window.innerWidth 
-console.log(currnetWidth);
 
-menuBtn.addEventListener('click', function(e){
+menuBtn.addEventListener('click', function(e){   
    menu.classList.add('menu-active')
 })
 
 closeBtn.addEventListener('click', function(e){
    menu.classList.remove('menu-active')
 })
+
+
+let currnetWidth = window.innerWidth 
 
 let slides = null
 if(window.innerWidth > 1200){
@@ -42,9 +43,15 @@ let swiper = new Swiper(".mySwiper", {
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
         return;
       }
-
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
+         if(entry.target.classList.contains('fade')){
+            entry.target.classList.add('animate');
+         }else if(entry.target.classList.contains('fade-left')){
+            entry.target.classList.add('animate-left');
+         }else if(entry.target.classList.contains('fade-right')){
+            entry.target.classList.add('animate-right');
+         }
+        
       }
     });
  });
@@ -55,45 +62,16 @@ document.querySelectorAll('.fade').forEach((i) => {
    }
 });
 
-
-const observerRight = new IntersectionObserver(entries => {
-   entries.forEach(entry => {
-      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-        return;
-      }
-
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-right');
-      }
-    });
- });
-
-document.querySelectorAll('.fade-right').forEach((i) => {
-   if (i) {
-       observerRight.observe(i);
-   }
-});
-
-
-const observerLeft = new IntersectionObserver(entries => {
-   entries.forEach(entry => {
-      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-        return;
-      }
-
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-left');
-      }
-    });
- });
-
 document.querySelectorAll('.fade-left').forEach((i) => {
    if (i) {
-       observerLeft.observe(i);
+       observer.observe(i);
    }
 });
-
-console.log(window);
+document.querySelectorAll('.fade-right').forEach((i) => {
+   if (i) {
+       observer.observe(i);
+   }
+});
 
 window.addEventListener('resize', function (e) {
    console.log(e.target.outerWidth);
