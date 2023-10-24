@@ -1,7 +1,20 @@
+let menuBtn = document.getElementById('menu-btn')
+let closeBtn = document.getElementById('close')
+let menu = document.getElementById('menu')
+
+menuBtn.addEventListener('click', function(e){
+   menu.classList.add('menu-active')
+})
+
+closeBtn.addEventListener('click', function(e){
+   menu.classList.remove('menu-active')
+})
+
+
 let swiper = new Swiper(".mySwiper", {
-   loop: true,
    slidesPerView: 3,
    spaceBetween: 30,
+   loop: true,
    navigation: {
      nextEl: ".swiper-button-next",
      prevEl: ".swiper-button-prev",
@@ -30,8 +43,6 @@ document.querySelectorAll('.fade').forEach((i) => {
        observer.observe(i);
    }
 });
-
-
 
 
 const observerRight = new IntersectionObserver(entries => {
@@ -70,3 +81,47 @@ document.querySelectorAll('.fade-left').forEach((i) => {
        observerLeft.observe(i);
    }
 });
+
+
+
+window.addEventListener('resize', function (e) {
+   console.log(e.target.outerWidth);
+   if(e.target.outerWidth < 1200 && e.target.outerWidth >= 900){ 
+      swiper.destroy(); 
+      swiper = new Swiper('.mySwiper', {
+         loop: true,
+         slidesPerView: 2,
+         spaceBetween: 30,
+         navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+         },
+         keyboard: true,
+      });
+   } else if(e.target.outerWidth >= 1200){
+      swiper.destroy(); 
+      swiper = new Swiper('.mySwiper', {
+         loop: true,
+         slidesPerView: 3,
+         spaceBetween: 30,
+         navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+         },
+         keyboard: true,
+      });
+   }else{
+      swiper.destroy(); 
+      swiper = new Swiper('.mySwiper', {
+         loop: true,
+         slidesPerView: 1,
+         spaceBetween: 30,
+         navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+         },
+         keyboard: true,
+      });
+   }
+ });
+
