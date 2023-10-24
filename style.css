@@ -128,7 +128,7 @@ img{
 
 .menu__content{
    height: 100vh;
-   padding: 70% 0px 0px 40px;
+   padding: 30% 0px 0px 40px;
 }
 
 .menu__content ul li{
@@ -950,6 +950,11 @@ section.house *{
    .menu-btn{
       padding: 15px 20px;
       margin-right: 0;
+   }
+
+   .menu__content{
+      height: 100vh;
+      padding: 60% 0px 0px 40px;
    }
 
    .house h1{

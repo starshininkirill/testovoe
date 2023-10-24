@@ -74,7 +74,7 @@ document.querySelectorAll('.fade-right').forEach((i) => {
 });
 
 window.addEventListener('resize', function (e) {
-   if(e.target.innerWidth < 1200 && e.target.innerWidth >= 900){ 
+   if(e.target.innerWidth < 1200 && e.target.innerWidth > 900){ 
       swiper.destroy(); 
       swiper = new Swiper('.mySwiper', {
          loop: true,
