@@ -74,8 +74,7 @@ document.querySelectorAll('.fade-right').forEach((i) => {
 });
 
 window.addEventListener('resize', function (e) {
-   console.log(e.target.outerWidth);
-   if(e.target.outerWidth < 1200 && e.target.outerWidth >= 900){ 
+   if(e.target.innerWidth < 1200 && e.target.innerWidth >= 900){ 
       swiper.destroy(); 
       swiper = new Swiper('.mySwiper', {
          loop: true,
@@ -87,7 +86,7 @@ window.addEventListener('resize', function (e) {
          },
          keyboard: true,
       });
-   } else if(e.target.outerWidth >= 1200){
+   } else if(e.target.innerWidth >= 1200){
       swiper.destroy(); 
       swiper = new Swiper('.mySwiper', {
          loop: true,
