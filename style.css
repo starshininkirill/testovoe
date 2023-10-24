@@ -117,7 +117,7 @@ img{
    background-color: #fff;
    transform: translateX(100%);
    width: 90%;
-   height: 100vh;
+   height: 100%;
    margin-left: auto;
    transition: all 1s;
 }
@@ -127,7 +127,8 @@ img{
 }
 
 .menu__content{
-   padding: 30% 0px 0px 40px;
+   height: 100vh;
+   padding: 70% 0px 0px 40px;
 }
 
 .menu__content ul li{
@@ -148,9 +149,8 @@ img{
    padding: 20px 15px;
    display: inline-block;
    position: absolute;
-   /* top: 30px; */
-   bottom: 40px;
-   right: 30px;
+   top: 30px;
+   left: 30px;
    border-radius: 15px;
    cursor: pointer;
    font-size: 24px;

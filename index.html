@@ -137,9 +137,9 @@
                <div class="material__connect-content">
                   <h3 class="my-header">Не нашли нужную категорию материала?</h3>
                   <p>Оставьте номер телефона, мы перезвоним в течение рабочего дня и проконсультируем по всем вопросам</p>
-                  <form>
-                     <input type="text" placeholder="Ваше имя">
-                     <input type="tel" placeholder="Номер телефона*">
+                  <form action="form.php" method="POST">
+                     <input name="name" type="text" placeholder="Ваше имя">
+                     <input name="phone" type="tel" placeholder="Номер телефона*">
                      <p>*Нажимая на кнопку, Вы соглашаетесь   <span>на обработку персональных данных</span></p>
                      <button class="my-btn" type="submit">Отправить</button>
                   </form>
