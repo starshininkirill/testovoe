@@ -944,6 +944,14 @@ section.house *{
       padding: 15px 20px;
    }
 
+   .nav{
+      padding: 0 10px;
+   }
+   .menu-btn{
+      padding: 15px 20px;
+      margin-right: 0;
+   }
+
    .house h1{
       margin-left: 2%;
       width: 40%;
