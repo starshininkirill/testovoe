@@ -5,7 +5,10 @@
    font-family: 'PT Root UI', sans-serif;
    font-size: 16px;
    color: #383838;
+   line-height: 24px;
 }
+
+
 
 body{
    position: relative;
@@ -122,11 +125,11 @@ img{
    position: relative;
 }
 
-.nav__contact a:nth-child(1):hover::before{
+.nav__contact a:nth-child(1):hover::after{
    filter: saturate(0);
 }
 
-.nav__contact a:nth-child(1)::before{
+.nav__contact a:nth-child(1)::after{
    content: url('/images/icons/mail.png') ;
    position: absolute;
    left: 0;
@@ -140,11 +143,11 @@ img{
    padding-left: 37px;
 }
 
-.nav__contact a:nth-child(2):hover::before{
+.nav__contact a:nth-child(2):hover::after{
    filter: saturate(0);
 }
 
-.nav__contact a:nth-child(2)::before{
+.nav__contact a:nth-child(2)::after{
    content: url('/images/icons/phone.png') ;
    position: absolute;
    left: 0;
@@ -157,11 +160,11 @@ img{
    position: relative;
 }
 
-.nav__contact a:nth-child(3):hover::before{
+.nav__contact a:nth-child(3):hover::after{
    filter: saturate(0);
 }
 
-.nav__contact a:nth-child(3)::before{
+.nav__contact a:nth-child(3)::after{
    content: url('/images/icons/whatsup.png') ;
    position: absolute;
    left: 0;
@@ -174,12 +177,12 @@ img{
    padding-right: 18px;
    
 }
-.nav__contact a:nth-child(4):hover::before{
+.nav__contact a:nth-child(4):hover::after{
    filter: saturate(0);
 }
 
 
-.nav__contact a:nth-child(4)::before{
+.nav__contact a:nth-child(4)::after{
    content: url('/images/icons/tg.png') ;
    position: absolute;
    left: 0;
@@ -452,6 +455,11 @@ section.house *{
    line-height: 20px;
    font-weight: 400;
    text-decoration: underline;
+}
+
+.material__connect-content form p span:hover{
+   cursor: pointer;
+   color: #0046BB;
 }
 
 .material__connect-content button{
